@@ -25,7 +25,9 @@ sudo sh -c "htpasswd -Bbn username username > /home/user/registry/auth/htpasswd"
 ## Configure Docker clients to trust your registry
 
 sudo mkdir -p /etc/docker/certs.d/registry.k8s:9443
+
 sudo cp /home/odl_user_1690629/registry/certs/domain.crt /etc/docker/certs.d/registry.k8s:9443/ca.crt
+
 docker login registry.k8s:9443 -u trihn -p trihn
 
 curl -v https://registry.k8s
