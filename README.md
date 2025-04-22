@@ -16,10 +16,13 @@ sudo openssl req -newkey rsa:4096 -nodes -sha256 \
 ## Create authentication credentials
 
 sudo apt update
+
 sudo apt install apache2-utils -y
 
 sudo htpasswd -Bbn username password > /home/user/registry/auth/htpasswd
+
 or
+
 sudo sh -c "htpasswd -Bbn username username > /home/user/registry/auth/htpasswd"
 
 ## Configure Docker clients to trust your registry
